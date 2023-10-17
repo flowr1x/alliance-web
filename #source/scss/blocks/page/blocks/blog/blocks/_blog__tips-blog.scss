@@ -7,8 +7,15 @@
         border-radius: 5px;
         overflow: hidden;
         box-shadow: 1px 1px 12px 0px rgba(71, 71, 71, 0.03);
+        cursor:pointer;
+        transition: .3s;
+        &:hover {
+            box-shadow: 1px 1px 12px 0px rgba(71, 71, 71, 0.06);
+        }
+        &:hover .tip-blog__title {
+            color: $accent;
+        }
     }
-    &__item {}
 }
 .tip-blog {   
     &__image {

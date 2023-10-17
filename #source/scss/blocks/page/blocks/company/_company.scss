@@ -1,7 +1,7 @@
 .company {
     position: relative;
 
-    @include responseValue("min-height", 489, 688);
+    @include responseValue("min-height", 469, 688);
     background: url("../image/bg.jpg") bottom left/cover no-repeat;
     &::before {
         content: "";

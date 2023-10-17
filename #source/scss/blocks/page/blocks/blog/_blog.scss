@@ -8,16 +8,19 @@
           column-gap: 0;
         }
     }
-}
-.blog-title {
-    &.title-services {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 32px;
+    &__title {
+        &.title-services {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+        &:not(:last-child) {
+            margin: 0 0 40px 0;
+        }
     }
-    &:not(:last-child) {
-        margin: 0 0 40px 0;
+    &__tips {
+        padding-bottom: 32px;
     }
 }

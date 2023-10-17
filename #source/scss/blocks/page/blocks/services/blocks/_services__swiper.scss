@@ -1,0 +1,11 @@
+.swiper-pagination{
+    &-bullet {
+        background: #e0e0e0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        &-active {
+            background: $yellow;
+        }
+    }
+}

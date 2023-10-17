@@ -1,5 +1,6 @@
 @import "./blocks/services__title";
 @import "./blocks/services__cards";
+@import "./blocks/services__swiper";
 
 .services {
     padding: 79px 0 100px 0;
@@ -8,13 +9,11 @@
             margin: 0 0 40px 0;
         }
     }
-    &__swiper {
-        padding: 15px;
+    &__cards {
+        padding-bottom: 32px;
     }
-    &__pagination {
-        top: 15px;
-    }
-    @media (max-width: 767px) {
+    @include media($phone) {
+        padding: 40px 0;
         &__swiper .swiper-wrapper {
           display: flex;
           column-gap: 0;

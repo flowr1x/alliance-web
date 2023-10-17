@@ -1,7 +1,7 @@
 .menu {
     padding: 0 10px;
     position: relative;
-    z-index: $layout-3;
+    z-index: $layout-5;
     &__list {
         display: flex;
         column-gap: 32px;
@@ -16,7 +16,7 @@
     }
     @include media($tablet) {
         position: fixed;
-        z-index: $layout-1;
+        z-index: $layout-4;
         top: 0;
         left: -100%;
         width: 100%;
