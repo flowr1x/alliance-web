@@ -1,0 +1,9 @@
+@import "./blocks/company/company";
+@import "./blocks/services/services";
+@import "./blocks/local/local";
+@import "./blocks/map/map";
+@import "./blocks/blog/blog";
+
+.page {
+    flex: 1 1 auto;
+}

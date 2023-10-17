@@ -1,0 +1,43 @@
+.contact {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    position: relative;
+    z-index: $layout-3;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -24px;
+        height: 34px;
+        width: 1px;
+        background-color: #E0E0E0;
+        transform: translate(0, -50%);
+    }
+    &__phone {
+        img {
+            width: 18px;
+        }
+        span {
+            margin: 0 0 0 16px;
+        }
+    }
+    @include media(1130px) {
+        &::before {
+            display: none;
+        }
+        &__phone {
+            span {
+                display: none;
+            }
+        }
+    }
+    @include media($phone) {
+        flex-direction: row-reverse;
+    }
+    @include media(456px) {
+        &__button {
+            display: none;
+        }
+    }
+}

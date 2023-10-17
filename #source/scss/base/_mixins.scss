@@ -1,0 +1,23 @@
+@mixin media($size) {
+    @media (max-width: toEm($size)) {
+        @content;
+    }
+}
+
+@mixin responseValue($property, $minValue, $maxValue, $type: 0) {
+    $addSize: $maxValue - $minValue;
+    @if $type == 1 {
+        #{$property}: $maxValue + px;
+        @include mediaContainer {
+            #{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{$container - 320}));
+        }
+    }
+    @if $type == 2 {
+        #{$property}: $maxValue + px;
+        @media (min-width: 1920px) {
+            #{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{1920 - 320}));
+        }
+    } @else {
+        #{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{1440 - 320}));
+    }
+}

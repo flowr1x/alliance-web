@@ -1,0 +1,23 @@
+@import "./blocks/blog__tips-blog";
+.blog {
+    padding: 128px 0 120px 0;
+    @media (max-width: 767px) {
+        padding: 40px 0;
+        &__swiper .swiper-wrapper {
+          display: flex;
+          column-gap: 0;
+        }
+    }
+}
+.blog-title {
+    &.title-services {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+    &:not(:last-child) {
+        margin: 0 0 40px 0;
+    }
+}

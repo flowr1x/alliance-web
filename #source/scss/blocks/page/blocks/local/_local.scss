@@ -1,0 +1,44 @@
+@import "./blocks/local__form";
+
+.local {
+    background-color: rgba($blue, .04);
+    padding: 80px 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+    &__title {
+        &:not(:last-child) {
+            margin: 0 0 40px 0;
+        }
+    }
+    &__list {
+        li:not(:last-child) {
+            margin: 0 0 16px 0;
+        }
+    }
+    &__link {
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        align-items: center;
+        column-gap: 16px; 
+    }
+    &__address {
+        flex: 1 1 740px;
+    }
+    &__form {
+        flex: 1 1 548px;
+    }
+    @include media($phone) {
+        padding: 40px 0;
+        &__title {
+            &:not(:last-child) {
+                margin: 0 0 32px 0;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,75 @@
+.form {
+    background-color: $white;
+    box-shadow: 1px 1px 12px 0px rgba(71, 71, 71, 0.06);
+    padding: 56px;
+    &__title {
+        text-align: center;
+        font-size: toRem(24px);
+        font-weight: 500;
+        text-transform: capitalize;
+        &:not(:last-child) {
+            margin: 0 0 40px 0;
+        }
+    }
+    &__body {
+        & > *:not(:last-child) {
+            margin: 0 0 16px;
+        }
+    }
+    &__inputs {
+        display: flex;
+        gap: 16px 12px;
+        flex-wrap: wrap;
+        .form__input {
+            flex: 1 1 calc(50% - 12px);
+            min-width: 162px;
+        }
+    }
+    &__input {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        label {
+            font-size: toRem(14px);
+            font-weight: 500;
+            text-transform: capitalize;
+            span {
+                color: $yellow;
+            }
+        }
+        input {
+            height: 40px;
+            padding: 13px 16px;
+            width: 100%;
+            border: 1px solid #E0E0E0;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 73px;
+            border: 1px solid #E0E0E0;
+            border-radius: 4px;
+        }
+    }
+    &__button {
+        margin: 32px 0 0;
+        text-align: center;
+        & .button {
+            min-height: 47px;
+            padding: 14px 24px;
+        }
+    }
+    @include media($phone) {
+        padding: 24px;
+        &__title {
+            &:not(:last-child) {
+                margin: 0 0 32px 0;
+            }
+        }
+        &__button {
+            & .button {
+                width: 100%;
+            }
+        }
+    }
+}

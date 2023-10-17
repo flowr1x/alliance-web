@@ -1,0 +1,158 @@
+@import "./blocks/header__button";
+@import "./blocks/header__contact";
+@import "./blocks/header__menu";
+
+.header {
+    &__container {
+        min-height: 99px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: $layout-2;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.02);
+        }
+    }
+    &__burger {
+        display: none;
+    }
+    &__logo {
+        position: relative;
+        z-index: $layout-3;
+        img {
+            width: toRem(192px);
+        }
+    }
+    @include media($tablet) {
+        &__burger {
+            display: block;
+            height: 15px;
+            width: 30px;
+            cursor: pointer;
+            position: relative;
+            z-index: $layout-2;
+    
+            span,
+            &::after,
+            &::before {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 10%;
+                display: block;
+                background-color: $dark;
+                border-radius: 15px;
+                transition: .3s;
+            }
+            &::after, &::before {
+                content: "";
+            }
+            &::after {
+                bottom: 0;
+            }
+            span {
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            &::before {
+                top: 0;
+            }
+            &.active {
+                span {
+                    transform: scale(0);
+                }
+                &::before {
+                    top: 50%;
+                    transform: rotate(45deg) translate(0, -50%);
+                }
+                &::after {
+                    bottom: 50%;
+                    transform: rotate(-45deg) translate(0, 50%);
+                }
+            }
+        }
+    }
+    @include media($phone) {
+        &__container {
+            column-gap: 14px;
+        }
+        &__logo {
+            order: 1;
+            flex: 1 1 auto;
+            img {
+                width: 97px;
+            }
+        }
+        &__contact {
+            order: 2;
+        }
+        &__burger {
+            order: 3;
+        }
+    }
+    @include media(456px) {
+        &__container {
+            min-height: 56px;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .header {
+//     &__container {
+//         min-height: 56px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         position: relative;
+//         background-color: #fff;
+//         &::before {
+//             content: "";
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             background-color: #fff;
+//             z-index: $layout-2;
+//             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.02);
+//         }
+//     }
+//     &__logo {
+//         position: relative;
+//         z-index: $layout-2;
+//     }
+//     &__menu {}
+// }

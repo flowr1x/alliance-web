@@ -1,0 +1,41 @@
+.title-services {
+    line-height: 167.3%;
+    text-align: center;
+    &_left {
+        text-align: left;
+        .title-services__text {
+            margin: 0;
+            max-width: 100%;
+        }
+    }
+    &__title {
+        color: $gray;
+        font-size: toRem(12px);
+        font-weight: 600;
+        letter-spacing: toEm(1.2px);
+        text-transform: uppercase;
+        &:not(:last-child) {
+            margin: 0 0 8px 0;
+        }
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        font-size: toRem(32px);
+        font-weight: 500;
+        letter-spacing: toEm(-0.32px);
+        &:not(:last-child) {
+            margin: 0 0 16px 0;
+        }
+    }
+    &__text {
+        max-width: toRem(442px);
+        margin: 0 auto;
+        color: $second;
+    }
+    @include media($phone) {
+        &__subtitle {
+            font-size: toRem(20px);
+        }
+    }
+}
+ 

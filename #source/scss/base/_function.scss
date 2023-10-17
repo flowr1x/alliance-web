@@ -1,0 +1,16 @@
+@use "sass:math";
+// TO %
+@function toPercent($pxOne, $pxTwo) {
+    $result: math.div($pxOne, $pxTwo) * 100%;
+    @return $result;
+}
+// TO rem
+@function toRem($px) {
+    $result: math.div($px, 16px) + rem;
+    @return $result;
+}
+// To em
+@function toEm($px) {
+    $result: math.div($px, 16px) + em;
+    @return $result;
+}

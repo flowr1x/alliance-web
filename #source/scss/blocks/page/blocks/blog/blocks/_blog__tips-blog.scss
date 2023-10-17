@@ -1,0 +1,48 @@
+.tips-blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(429px, 1fr));
+    gap: 16px;
+    &__tip {
+        background-color: $white;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 1px 1px 12px 0px rgba(71, 71, 71, 0.03);
+    }
+    &__item {}
+}
+.tip-blog {   
+    &__image {
+        position: relative;
+        padding: 0 0 67.2%;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__body {
+        line-height: 167.3%;
+        padding: 24px;
+    }
+    &__date {
+        font-size: toRem(14px);
+        color: $second;
+        &:not(:last-child) {
+            margin: 0 0 8px 0;
+        }
+    }
+    &__title {
+        font-size: toRem(18px);
+        font-weight: 600;
+        letter-spacing: toEm(-0.18px);
+        &:not(:last-child) {
+            margin: 0 0 16px 0;
+        }
+    }
+    &__text {
+        color: $second;
+    }
+}

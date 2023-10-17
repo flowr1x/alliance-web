@@ -1,0 +1,26 @@
+.footer {
+    padding: 0 15px;
+    &__container {
+        border-top: 1px solid #E0E0E0;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0 40px;
+        flex-wrap: wrap;
+        gap: 8px 60px;
+    }
+
+    &__text { 
+        font-size: toRem(12px);
+        line-height: 167.3%;
+        opacity: .5;
+        text-wrap: balance; // Everyone hasn't support. Check in Chrome since 119 v. and firefox since 120 v.
+        &_upper {
+            text-transform: capitalize;
+        }
+        &-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 44px;
+        }
+    }
+}
