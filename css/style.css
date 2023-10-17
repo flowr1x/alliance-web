@@ -695,6 +695,9 @@ body._lock {
   border: 1px solid #E0E0E0;
   border-radius: 4px;
 }
+.form__input_error input {
+  border: 2px solid #ff7b72;
+}
 .form__button {
   margin: 32px 0 0;
   text-align: center;
@@ -713,6 +716,11 @@ body._lock {
   .form__button .button {
     width: 100%;
   }
+}
+
+.error-text {
+  font-weight: 600;
+  color: #ff7b72;
 }
 
 .local {

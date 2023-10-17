@@ -50,6 +50,11 @@
             border: 1px solid #E0E0E0;
             border-radius: 4px;
         }
+        &_error {
+            input {
+                border: 2px solid $red;
+            }
+        }
     }
     &__button {
         margin: 32px 0 0;
@@ -72,4 +77,8 @@
             }
         }
     }
+}
+.error-text {
+    font-weight: 600;
+    color: $red;
 }
