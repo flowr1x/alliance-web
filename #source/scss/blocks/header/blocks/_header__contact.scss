@@ -20,6 +20,10 @@
         }
         span {
             margin: 0 0 0 16px;
+            transition: color .3s;
+            &:hover {
+                color: $accent;
+        }
         }
     }
     @include media(1130px) {

@@ -70,11 +70,6 @@ html, body {
 }
 html a, body a {
   color: #142B35;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-}
-html a:hover, body a:hover {
-  color: #3A98B2;
 }
 
 body._lock {
@@ -187,6 +182,11 @@ body._lock {
 }
 .contact__phone span {
   margin: 0 0 0 16px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.contact__phone span:hover {
+  color: #3A98B2;
 }
 @media (max-width: 70.625em) {
   .contact::before {
@@ -222,6 +222,13 @@ body._lock {
   -webkit-column-gap: 32px;
      -moz-column-gap: 32px;
           column-gap: 32px;
+}
+.menu__link {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.menu__link:hover {
+  color: #3A98B2;
 }
 .menu__button {
   display: none;
@@ -272,7 +279,7 @@ body._lock {
     gap: 24px 0;
   }
   .menu__link {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .menu__button {
     text-align: center;
@@ -307,7 +314,7 @@ body._lock {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  z-index: 5;
+  z-index: 50;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.02);
 }
@@ -513,6 +520,7 @@ body._lock {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-auto-rows: 1fr;
   gap: 16px;
 }
 .cards__card {
@@ -758,6 +766,13 @@ body._lock {
   -webkit-column-gap: 16px;
      -moz-column-gap: 16px;
           column-gap: 16px;
+  text-transform: capitalize;
+  line-height: 167.3%;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.local__link:hover {
+  color: #3A98B2;
 }
 .local__address {
   -webkit-box-flex: 1;

@@ -26,10 +26,6 @@ html, body {
     color: $dark;
     a {
         color: $dark;
-        transition: color .3s;
-        &:hover {
-            color: $accent;
-        }
     }
     line-height: 1;
 }

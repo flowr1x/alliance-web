@@ -25,6 +25,12 @@
         grid-template-columns: 24px 1fr;
         align-items: center;
         column-gap: 16px; 
+        text-transform: capitalize;
+        line-height: 167.3%;
+        transition: color .3s;
+            &:hover {
+                color: $accent;
+        }
     }
     &__address {
         flex: 1 1 740px;
