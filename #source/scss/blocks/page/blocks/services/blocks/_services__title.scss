@@ -1,5 +1,4 @@
 .title-services {
-    line-height: 167.3%;
     text-align: center;
     &_left {
         text-align: left;
@@ -7,8 +6,13 @@
             margin: 0;
             max-width: 100%;
         }
+        .title-services__subtitle {
+            font-size: toRem(24px);
+            letter-spacing: toEm(-0.24px);
+        }
     }
     &__title {
+        line-height: 167.3%;
         color: $gray;
         font-size: toRem(12px);
         font-weight: 600;
@@ -19,6 +23,7 @@
         }
     }
     &__subtitle {
+        line-height: 167.3%;
         text-transform: uppercase;
         font-size: toRem(32px);
         font-weight: 500;
@@ -28,6 +33,7 @@
         }
     }
     &__text {
+        line-height: 167.3%;
         max-width: toRem(442px);
         margin: 0 auto;
         color: $second;
@@ -35,6 +41,18 @@
     @include media($phone) {
         &__subtitle {
             font-size: toRem(20px);
+            line-height: 134.3%; 
+        }
+        &__text {
+            font-size: toRem(14px);
+            line-height: 155.3%;
+        }
+        &_left {
+            .title-services__subtitle {
+                letter-spacing: toEm(-0.2px);
+                font-size: toRem(20px);
+                line-height: 157.3%
+            }
         }
     }
 }

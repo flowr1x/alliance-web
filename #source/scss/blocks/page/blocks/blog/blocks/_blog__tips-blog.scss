@@ -52,4 +52,9 @@
     &__text {
         color: $second;
     }
+    @include media($phone) {
+        &__text {
+            display: none;
+        }
+    }
 }

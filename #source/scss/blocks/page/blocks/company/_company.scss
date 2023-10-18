@@ -2,7 +2,7 @@
     position: relative;
 
     @include responseValue("min-height", 469, 688);
-    background: url("../image/bg.jpg") bottom left/cover no-repeat;
+    background: url("../image/bg.jpg") center/cover no-repeat;
     &::before {
         content: "";
         position: absolute;
@@ -32,7 +32,8 @@
         font-weight: 600;
         text-transform: capitalize;
         max-width: toRem(676px);
-        position: relative; 
+        position: relative;
+        line-height: normal;
         &::after {
             content: "";
             position: absolute;

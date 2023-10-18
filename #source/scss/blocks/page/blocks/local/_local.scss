@@ -23,13 +23,17 @@
     &__link {
         display: grid;
         grid-template-columns: 24px 1fr;
-        align-items: center;
+        align-items: flex-start;
+        font-size: toRem(14px);
         column-gap: 16px; 
         text-transform: capitalize;
         line-height: 167.3%;
         transition: color .3s;
-            &:hover {
-                color: $accent;
+        &:hover {
+            color: $accent;
+        }
+        img {
+            height: 24px;
         }
     }
     &__address {
@@ -43,6 +47,12 @@
         &__title {
             &:not(:last-child) {
                 margin: 0 0 32px 0;
+            }
+        }
+        &__link {
+            column-gap: 13px 16px;
+            img {
+                height: 18px;
             }
         }
     }
